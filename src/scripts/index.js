@@ -43,10 +43,65 @@ if (process.env.NODE_ENV === 'development') {
 
 //console.log('webpack starterkit!!' + carId + '/' + carId1 + '/'  + carId2);
 
-for (let i=0;i<5; i++) {
-  if (i === 3) {
-    break;
-  }
-  console.log(i);
-}
+// for (let i=0;i<5; i++) {
+//   if (i === 3) {
+//     break;
+//   }
+//   console.log(i);
+// }
+
+// let id = 123;
+// console.log(id !== '123');
+
+// let year=1967;
+// console.log(++year);
+// console.log(year++);
+// console.log(year);
+// console.log(++year);
+
+// let year1="1967";
+// console.log(+year1);
+// console.log(typeof(+year1));
+// console.log(-year1);
+// console.log(typeof(-year1));
+
+// if (5 === 3 && 6 === 3) {
+//   console.log(true);
+// }
+// else {
+//   console.log(false);
+// }
+
+// let userSettings = null;
+// let defaultSettings = { name: 'Default'};
+// console.log( userSettings || defaultSettings);
+
+// let car = null;
+// if (!car) {
+//   console.log('error!');
+// }
+// else {
+//   console.log(car);
+// }
+
+// let s1 = 'Zoo';
+// let s2 = 'alphabet';
+
+// if ( s1 < s2) {
+//   console.log(true);
+// } else {
+//   console.log(false);
+// }
+// if ( s1.toUpperCase < s2.toUpperCase) {
+//   console.log(true);
+// } else {
+//   console.log(false);
+// }
+
+// let anum = 4;
+// console.log ( 55 > anum ? 'yes' : 'no');
+
+let year = 1964;
+year += 10;
+console.log(year);
 
