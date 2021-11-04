@@ -306,3 +306,51 @@ if (process.env.NODE_ENV === 'development') {
 // element2.classList.add('p2');
 // element2.style.color = 'blue';
 // console.log(element2);
+
+// try {
+//   //throw new Error("newerror");
+//   let car = 1 / 'e';
+//   console.log(car);
+// }
+// catch(error) {
+//   console.log('error', console.error());
+// }
+// finally {
+//   console.log('this always exceutes');
+// }
+
+// // eslint-disable-next-line no-undef
+// let promise = new Promise(
+//   // eslint-disable-next-line no-unused-vars
+//   function(resolve,reject) {
+//     //setTimeout(resolve, 100,'someValueResolve');
+//     setTimeout(reject, 100,'someValueReject');
+//   }
+// );
+// promise.then(
+//   value => console.log('fulfilled: ' + value),
+//   error => console.log('rejected: ' + error)
+// );
+
+// NOTUSED
+// let xhtttp = new XMLHttpRequest();
+// xhtttp.onreadystatechange = function() {
+//   if (this.readyState == 4 && this.readyState == 200) {
+//     console.log(this.responseText);
+//   }
+// };
+// xhtttp.open("GET","http://5b32a4fd82407e001413f1df.mockapi.io/api/v1/users",true);
+// xhtttp.send();
+
+// import $ from 'jQuery';
+// let promise = $.get("http://5b32a4fd82407e001413f1df.mockapi.io/api/v1/users");
+// promise.then(
+//     data => console.log('success: ', data),
+//     error => console.log('error: ', error));
+
+// let user = {name: 'Mark Zamoyta', avatar: 'mark.jpg'};
+// let promise2 = $.post("http://5b32a4fd82407e001413f1df.mockapi.io/api/v1/users",user);
+// promise2.then(
+//   data => console.log('data: ', data),
+//   error => console.log('error: ', error));
+
