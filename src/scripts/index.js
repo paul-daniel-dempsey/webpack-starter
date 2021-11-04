@@ -243,6 +243,66 @@ if (process.env.NODE_ENV === 'development') {
 // let car = new Car();
 // console.log(car.start());
 
-import { Car } from './models/car';
-let car = new Car(123);
-console.log(car.id);
+// import { Car } from './models/car';
+// let car = new Car(123);
+// console.log(car.id);
+
+// import { Car } from './models/car';
+// console.log(window.innerWidth);
+
+//let timeOut = setTimeout(function() { console.log('1 second past');},1000);
+//clearTimeout(timeOut); // cancel
+
+// let i =0;
+// let interval = setInterval(function() { 
+//   i = i + 1;
+//     if (i < 5) {
+//       console.log(`${i} second past`);}
+//     else {
+//       clearInterval(interval);
+//     }
+//   },300);
+
+// console.log(location.href);
+// console.log(location.hostname);
+// console.log(location.port);
+// console.log(location.pathname);
+// console.log(location.search);
+//console.log(location.assign('subfolder'));
+//console.log(location.reload());
+
+//console.log(document.body);
+
+// let el = document.getElementById('first');
+// console.log(el);
+// console.log('getElementById->' + el);
+
+// let els = document.getElementsByClassName('p1');
+// console.log(els);
+// console.log('getElementsByClassName->' + els);
+// console.log('getElementsByClassNameFOR->');
+// for (let i = 0; i < els.length; i++) {
+//   console.log(els[i]);
+// }
+// console.log('getElementsByClassNameFOROF->');
+// for (el of els) {
+//   console.log(el);
+// }
+// console.log('getElementsByClassNameFORIN->');
+// for (el in els) {
+//   console.log(el);
+// }
+
+// let eltags = document.getElementsByTagName('p');
+// console.log('getElementsByTagName->' + eltags);
+// console.log(eltags);
+
+// let element1 = document.getElementById('first');
+// element1.textContent="New Content..";
+// element1.setAttribute('foo','fooValue');
+// console.log(element1);
+
+// let element2 = document.getElementById('third');
+// element2.classList.add('p2');
+// element2.style.color = 'blue';
+// console.log(element2);
