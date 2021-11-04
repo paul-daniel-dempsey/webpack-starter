@@ -172,8 +172,77 @@ if (process.env.NODE_ENV === 'development') {
 // let getId3 = () =>  123;
 // console.log(getId3());
 
-let trackCar = function(carId, city='NY') {
-  console.log(`Tracking ${carId} in ${city}`);
-};
-console.log(trackCar(123));
-console.log(trackCar(123,'Chicago'));
+// let trackCar = function(carId, city='NY') {
+//   console.log(`Tracking ${carId} in ${city}`);
+// };
+// console.log(trackCar(123));
+// console.log(trackCar(123,'Chicago'));
+
+// function Car(id) {
+//   this.carId = id;
+//   this.start = function() { console.log('start: '+ this.carId);};
+// }
+// let vehicle = new Car(123);
+// console.log(vehicle.start() );
+
+// function Car1(id) {
+//   this.carId = id;
+// }
+// Car1.prototype.start = function() { console.log('start: '+ this.carId);};
+// let vehicle1 = new Car1(123);
+// console.log(vehicle1.start() );
+
+// String.prototype.hello = function() { return this.toString() + ' Hello';};
+// console.log('foo'.hello());
+
+// let busIds = [{ id: 123, style : 'doubledecker'},{ id: 1234, style : 'singledecker'}];
+// console.log(JSON.stringify(busIds));
+
+// let jsonIn =`[{"carId" : 123},{"carId" : 456},{"carId" : 789}]`;
+// let carIds = JSON.parse(jsonIn);
+// console.log(JSON.stringify(carIds));
+
+// let carIds = [{"carId" : 123, style: 'sedan'},{"carId" : 789, style: 'convertible'},{"carId" : 456, style: 'sedan'}];
+// let convertibles = carIds.filter(car => car.style === 'convertible');
+// let allcarsabove = carIds.filter(car => car.carId > 123);
+// let everycargreater = carIds.every(car => car.carId > 122);
+// let firstcargreater = carIds.find(car => car.carId > 123);
+// console.log(convertibles);
+// console.log(allcarsabove);
+// console.log(everycargreater);
+// console.log(firstcargreater);
+
+// class Car {
+//   constructor(id){
+//     this.id = id;
+//   }
+//   identify(suffix) {
+//     return `Car Id: ${this.id} ${suffix}`;
+//   }
+// }
+// let car = new Car(123);
+// console.log(car.id);
+// console.log(car.identify('!!!'));
+
+// class Vehicle {
+//   constructor() {
+//     this.type = 'car';
+//   }
+//   start() {
+//     return `Starting: ${this.type}`;
+//   }
+// }
+// class Car extends Vehicle {
+//   constructor() {  
+//     super();
+//   }
+//   start() {
+//     return `in Car start ` + super.start();
+//   }
+// }
+// let car = new Car();
+// console.log(car.start());
+
+import { Car } from './models/car';
+let car = new Car(123);
+console.log(car.id);
