@@ -98,11 +98,32 @@ if (process.env.NODE_ENV === 'development') {
 //   console.log(false);
 // }
 
-// let anum = 4;
-// console.log ( 55 > anum ? 'yes' : 'no');
+ // let anum = 4;
+ // console.log ( 55 > anum ? 'yes' : 'no');
 
-let year = 1964;
-year += 10;
-console.log(year);
+// let year = 1964;
+// year += 10;
+// console.log(year);
 
-// comments123
+// function startCar(carId) {
+//   let message = 'Starting...' + carId;
+//   let startFn = function turnKey() {
+//     let message = 'Override';
+//     console.log(message);
+//   };
+//   startFn();
+//   console.log(message);
+// }
+// startCar(123);
+
+// let app = (function() { console.log('in function'); return {};})();
+// console.log(app);
+
+let app1 =(function() {
+  let carId =123;
+  let getId = function() {
+    return carId;
+  };
+  return { getId: getId};
+})();
+console.log(app1.getId());
