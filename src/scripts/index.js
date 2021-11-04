@@ -119,11 +119,61 @@ if (process.env.NODE_ENV === 'development') {
 // let app = (function() { console.log('in function'); return {};})();
 // console.log(app);
 
-let app1 =(function() {
-  let carId =123;
-  let getId = function() {
-    return carId;
-  };
-  return { getId: getId};
-})();
-console.log(app1.getId());
+// let app1 =(function() {
+//   let carId =123+1;
+//   let getId = function() {
+//     return carId;
+//   };
+//   return { getId: getId};
+// })();
+// console.log(app1.getId());
+
+// let o = {
+//   carId : 123,
+//   getId : function() {
+//     return this.carId+1;
+//   }
+// };
+// console.log(o.carId + ' / ' + o.getId());
+
+// let o = {
+//   carId : 123,
+//   getId : function() {
+//     return this.carId + 1;
+//   }
+// };
+// let newCar = {carId : 456};
+// console.log(o.getId.call(newCar));
+
+// let o = {
+//   carId : 123,
+//   getId : function(prefix) {
+//     return prefix + this.carId + 1;
+//   }
+// };
+// let newCar = {carId : 456};
+// console.log(typeof(o.getId));
+// console.log(o.getId.apply(newCar,['ID: ']));
+
+// let o = {
+//   carId : 123,
+//   getId : function() {
+//     return this.carId;
+//   }
+// };
+// let newCar = {carId : 456};
+// let newFn = o.getId.bind(newCar);
+// console.log(newFn());
+
+// let getId1 = (prefix,suffix) => { return prefix + 123 + suffix;};
+// console.log(getId1('ID:','!'));
+// let getId2 = (prefix,suffix) => prefix + 123 + suffix;
+// console.log(getId2('ID:','!'));
+// let getId3 = () =>  123;
+// console.log(getId3());
+
+let trackCar = function(carId, city='NY') {
+  console.log(`Tracking ${carId} in ${city}`);
+};
+console.log(trackCar(123));
+console.log(trackCar(123,'Chicago'));
