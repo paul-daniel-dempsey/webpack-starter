@@ -354,3 +354,36 @@ if (process.env.NODE_ENV === 'development') {
 //   data => console.log('data: ', data),
 //   error => console.log('error: ', error));
 
+// let form = document.getElementById('user-form');
+// form.addEventListener('submit', event => {
+//   let user = form.elements['user'];
+//   let avatarFile = form.elements['avatar-file'];
+//   console.log(user.value, avatarFile.value);
+//   event.preventDefault();
+// });
+
+import $ from 'jQuery';
+let form = document.getElementById('user-form');
+form.addEventListener('submit', event => {
+  let user = form.elements['user'];
+  let avatarFile = form.elements['avatar-file'];
+  let userError = document.getElementById('user-error');
+  console.log(user.value,user.value.length,typeof(user.value));
+  if (user.value.indexOf('a') > -1) {
+    userError.textContent ='Invalid Entry';
+    userError.style.color = 'red';
+    user.style.borderColor = 'red';
+    user.focus();
+    event.preventDefault();
+  } else {
+    userError.textContent ='';
+    userError.style.color = 'black'; 
+    user.style.borderColor = 'black';
+    let posting = {user: user.value,avatarFile : avatarFile.value};  
+    let promise = $.post("http://5b32a4fd82407e001413f1df.mockapi.io/api/v1/users",posting);
+    promise.then(
+      data => console.log('data: ', data),
+      error => console.log('error: ', error));
+    event.preventDefault();
+  }
+});
